@@ -1,13 +1,88 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
+  @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@500&display=swap');
+  :root{
+    --primary:#ee6a5e;
+    --primary-light:#F29472;
+    --primary-light-2:rgb(253, 167, 91);
+    --secondary:#187b86;
+    --secondary-light:#2a8994;
+    --white:#fcf8ee;
+  }
+  html{
+    box-sizing: border-box;
+  }
+  *,*::after,*::before{
+    box-sizing: inherit;
+    border-radius: 0.5rem;
+  }
+  body {
+    font-family: 'Quicksand', sans-serif;
+    background: var(--white);
+    }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+  .game{
+    display: flex;
+    flex-direction: column;
+    height: 450px;
+    width: 450px;
+    margin: 10rem auto ;
+    align-items: center;
+  }
+  .game-board{
+    border: 0.2rem solid var(--primary);
+    background: var(--primary);
+  }
+  .status{
+    width: 450px;
+    text-align: center;
+    font-size: 2rem;
+    margin: 1rem 0;
+    background: var(--secondary);
+    padding: 2rem;
+    color: var(--white);
+  }
+ .board-row{
+  width: 450px;
+  }
+  .board-row:after {
+    clear: both;
+    content: "";
+    display: table;
+  }
+ /*  .status {
+     margin-bottom: 10px; 
+  } */
+  .square {
+    background: var(--primary-light-2);
+    border: 0.2rem solid var(--primary);
+    font-family: 'Quicksand', sans-serif;
+    color: var(--secondary);
+    float: left;
+    font-size: 5rem;
+    font-weight: bold;
+    height: 150px;
+    width: 150px;
+    text-align: center;
+    cursor: pointer;
+  }
+  
+  .square:focus {
+    outline: none;
+  }
+  
+  .kbd-navigation .square:focus {
+    background: pink;
+  }
+  ol{
+    text-decoration: none;
+    list-style: none;
+  }
+.move-btn{
+  font-family: 'Quicksand', sans-serif;
+  padding: 1rem;
+  width: 15rem;
+  border: 0.2rem solid var(--primary);
+  background: var(--secondary-light);
+  color: var(--white);
+  margin: 0.3rem 0;
+  cursor: pointer;
 }
