@@ -1,7 +1,7 @@
   @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@500&display=swap');
   :root{
     --primary:#ee6a5e;
-    --primary-light:#F29472;
+    --primary-light:rgb(247, 151, 67);
     --primary-light-2:rgb(253, 167, 91);
     --secondary:#187b86;
     --secondary-light:#2a8994;
@@ -52,7 +52,7 @@
      margin-bottom: 10px; 
   } */
   .square {
-    background: var(--primary-light-2);
+    background: var(--primary-light);
     border: 0.2rem solid var(--primary);
     font-family: 'Quicksand', sans-serif;
     color: var(--secondary);
@@ -64,7 +64,9 @@
     text-align: center;
     cursor: pointer;
   }
-  
+  .square:hover{
+    background: var( --primary-light-2);
+  }
   .square:focus {
     outline: none;
   }
@@ -85,4 +87,15 @@
   color: var(--white);
   margin: 0.3rem 0;
   cursor: pointer;
+}
+.horizontal-line {
+  height: 10px;
+  width: 399px;
+  position: absolute;
+  z-index: 1;
+  background: red;
+  left: 10px;
+  transition: 225ms;
+  transform: scaleX(0);
+  transform-origin: left;
 }

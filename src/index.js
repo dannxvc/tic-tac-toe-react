@@ -98,11 +98,11 @@ function Square(props) {
       });
 
       let status;
-      if(winner) {
-        status = 'Winner: ' + winner;
-      } else {
-        status = (this.state.XIsNext ? 'X' : 'O') + ' PLAYER TURN';
-      } /* else{
+        if(winner) {
+          status = 'Winner: ' + winner;
+        } else {
+          status = (this.state.XIsNext ? 'X' : 'O') + ' PLAYER TURN';
+        } /* else{
           status = 'DRAW';
       } */
       return (
